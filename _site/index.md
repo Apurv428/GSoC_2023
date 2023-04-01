@@ -1,4 +1,4 @@
-Heya, This is Apurv Sonawane from VJTI, Mumbai. This is the first time I’ll be applying for GSoC. After going through a vast array of Organisations and learning about their projects, I finally found the "*GSoC LMS Portal for Drupal*" project of **Drupal** quite interesting.
+Hello, This is Apurv Sonawane from VJTI, Mumbai. This is the first time I’ll be applying for GSoC. After going through a vast array of Organisations and learning about their projects, I finally found the "*GSoC LMS Portal for Drupal*" project of **Drupal** quite interesting.
 
 ## Getting Started
 
