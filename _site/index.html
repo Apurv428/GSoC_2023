@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/assets/css/style.css?v=d07d72355b93beb3027cbaddcfa9dc3bf600e671">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup theme-color -->
+<!-- start theme color meta headers -->
+<meta name="theme-color" content="#151515">
+<meta name="msapplication-navbutton-color" content="#151515">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<!-- end theme color meta headers -->
+
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Gearing up for GSoC 2023 | March 30, 2023</title>
+<meta name="generator" content="Jekyll v3.9.2" />
+<meta property="og:title" content="Gearing up for GSoC 2023" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="March 30, 2023" />
+<meta property="og:description" content="March 30, 2023" />
+<link rel="canonical" href="http://localhost:4000/" />
+<meta property="og:url" content="http://localhost:4000/" />
+<meta property="og:site_name" content="Gearing up for GSoC 2023" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Gearing up for GSoC 2023" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","description":"March 23, 2023","headline":"Gearing up for GSoC 2023","name":"Gearing up for GSoC 2023","url":"http://localhost:4000/"}</script>
+<!-- End Jekyll SEO tag -->
+
+  </head>
+
+  <body>
+
+    <header>
+      <div class="container">
+        <a id="a-title" href="/">
+          <h1>Gearing up for GSoC 2023</h1>
+        </a>
+        <h2>March 30, 2023</h2>
+
+        <section id="downloads">
+          
+          <a href="https://github.com/Apurv428/GSoC_2023" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
+        </section>
+      </div>
+    </header>
+
+    <div class="container">
+      <section id="main_content">
+        <p>Heya! This is Apurv Sonawane from VJTI, Mumbai. This is the first time I’ll be applying for GSoC. After going through a vast array of Organisations and learning about their projects, I finally found “<em>GSOC LMS Portal for Drupal</em>” project of <strong>Drupal</strong> quite interesting.</p>
+
+<h2 id="getting-started">Getting Started</h2>
+
+<p>I joined Slack and began digging deeper into the projects. I completed the setup locally. I'm creating this blog to summarise my path of developing a LMS prototype as a pre-proposal task.</p>
+
+<h2 id="getting-warmed-up">Getting Warmed up</h2>
+
+<h3 id="1-building-drupal-and-running-it-locally">1. Building Drupal and running it locally</h3>
+<ul> 
+  <li>First I followed the <a href="https://www.drupal.org/docs/develop/local-server-setup/windows-development-environment/quick-install-drupal-with-xampp-on">Local Setup using XAMPP</a>, which involved installing it using xampp. I performed all the steps but I got an error about the PHP version.</li>
+  <li>After some days, I found another setup option using ddev. I did the docker installation by following this <a href="https://ddev.readthedocs.io/en/latest/users/install/docker-installation/#docker-desktop-for-windows">this</a>.
+  <li>I tried all the steps mentioned on Stack Overflow to get rid of this error but I could not find any solution. Then, I installed ddev using this particular <a href="https://ddev.readthedocs.io/en/latest/users/install/ddev-installation/">Link</a>.
+  <li>After all the installation, I had to run the following commands:</br>
+    <div class="language-plaintext highlighter-rouge">
+      <div class="highlight"><pre class="highlight"><code>
+    </code></pre></div></div>
+    mkdir my-drupal10-site
+    cd my-drupal10-site
+    ddev config --project-type=drupal10 --docroot=web --create-docroot
+    ddev start
+    ddev composer create drupal/recommended-project
+    ddev composer require drush/drush
+    ddev drush site:install --account-name=admin --account-pass=admin -y
+    ddev drush uli
+    ddev launch
+</code></pre></div></div>
+  </li>
+</ul>
+
+<h3 id="2-a-simple-webapp-demonstraing-web-components-using-react-storybook">2. A simple webapp demonstrating mini-LMS</h3>
+<ul>
+  <li>I started by deciding the tech stack to be used, and listing out basic functionalities that an LMS must have.</li>
+  <li>As I am quite proficient at the full stack technologies like MERN-Stack, I decided to built my project using MERN Stack.</li>
+  <li>I began by creating a basic react app using the command.</li>
+  <div class="language-plaintext highlighter-rouge">
+    <div class="highlight"><pre class="highlight"><code>npx create-react-app client
+  </code></pre></div></div>
+  <li>I decided to develop the basic landing page for the starters.
+  </li>
+  <li>Later I focused on working on the Authentication part.</li>
+  <li>For authentication, I used the JWT token. Brcypt.Js was used for hashing the password.</li>
+  <li>When it comes to developing different components, initially I began by creating the basic components first. First of all, I developed the navbar and the sidebar using React. </li>
+  <li>I began working on the other components, starting with the calender for which, I used FullCalender React Component. I installed dependencies by</li>
+  <div class="language-plaintext highlighter-rouge">
+    <div class="highlight"><pre class="highlight"><code>npm i @fullcalendar/react
+  </code></pre></div></div>
+  <li>I used Moment for date and time to display in human readable format.</li>
+  <li>After successfully implementing the calender functionality, I went on for the Tasks page where all the tasks would be listed as well as user can add new tasks. For this functionality, I used Axios to make HTTP requests, browseHistory and Redirect from react-router-dom. The same was used to implement the Goals functionality.</li>
+  <li>Later I developed the conferencing functionality. Here Socket.Io was used so that client can send and receive messages in real-time with the server. UUIDs are used to uniquely identify entities. @chatscope/chat-ui-kit-react, a library of React components is used to build chat user interfaces quickly and easily.</li>
+  <li>Moving on with the flowchart functionality, flowchart.js is used for creating and rendering flowcharts. For the editor, I've used AceEditor which I imported from the react-ace. AceEditor component is used to create an instance of the Ace code editor within a React application. The same was used for the Editor functionality as well.</li>
+  <li>Later on moving on with the code collaborators functionality, I've used  judge0 api. Its a free and open source online code editor that allows you to write and execute code</li>
+  <li>Simple peer was used to transfer files over rtc and to connect multiple people over a video call.</li>
+  <li><a href="https://github.com/Apurv428/Online-Collaboration-Portal">GitHub</a></li>
+<li><a href="https://drive.google.com/file/d/1bhSa1p0BOVvyICLqNp6ZbQSuL7dImoa-/view?usp=sharing">Demo</a></li>
+</ul>
+<p><br /></p>
+      </section>
+    </div>
+  </body>
+</html>
