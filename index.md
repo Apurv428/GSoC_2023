@@ -1,4 +1,4 @@
-Heya, This is Apurv Sonawane from VJTI, Mumbai. This is the first time I’ll be applying for GSoC. After going through a vast array of Organisations and learning about their projects, I finally found the "*GSoC LMS Portal for Drupal*" project of **Drupal** quite interesting.
+Hello, This is Apurv Sonawane from VJTI, Mumbai. This is the first time I’ll be applying for GSoC. After going through a vast array of Organisations and learning about their projects, I finally found the "*GSoC LMS Portal for Drupal*" project of **Drupal** quite interesting.
 
 ## Getting Started
 
@@ -7,8 +7,9 @@ I joined Slack and began digging deeper into the projects. I completed the setup
 
 ### 1. Running Drupal locally
 - First I followed the [Local Setup using XAMPP](https://www.drupal.org/docs/develop/local-server-setup/windows-development-environment/quick-install-drupal-with-xampp-on) which involved installing it using xampp. I performed all the steps but I got an error about the PHP version.
+-  I tried all the steps mentioned on Stack Overflow to get rid of this error but I could not find any solution.
 - After some days, I found another setup option using ddev. I did the docker installation by following [this](https://ddev.readthedocs.io/en/latest/users/install/docker-installation/#docker-desktop-for-windows).
-- I tried all the steps mentioned on Stack Overflow to get rid of this error but I could not find any solution. Then, I installed ddev using this particular [Link](https://ddev.readthedocs.io/en/latest/users/install/ddev-installation/).
+- Then, I installed ddev using this particular [Link](https://ddev.readthedocs.io/en/latest/users/install/ddev-installation/).
 -  After all the installation, I had to run the following commands:
 ```
 mkdir my-drupal10-site
