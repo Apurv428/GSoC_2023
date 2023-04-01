@@ -22,7 +22,7 @@ ddev drush site:install --account-name=admin --account-pass=admin -y
 ddev drush uli
 ddev launch
 ```
-- I also followed this [Link](https://www.drupal.org/docs/installing-drupal/building-a-drupal-site-with-git/) to get the code from git and running it locally.
+- I also followed [this](https://www.drupal.org/docs/installing-drupal/building-a-drupal-site-with-git/) to get the code from git and run it locally.
 
 ### 2. A simple webapp demonstrating mini-LMS
 - I started by deciding the tech stack to be used, and listing out basic functionalities that an LMS must have.
